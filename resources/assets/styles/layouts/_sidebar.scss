@@ -1,0 +1,21 @@
+.sidebar {
+  @extend .col-sm-4;
+
+  .widget {
+    margin-bottom: 1.5em;
+
+    h3 {
+      font-family: $franklin;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      color: #000;
+    }
+  }
+
+  .widget_text {
+    h3 {
+      font-size: 1.35em;
+    }
+  }
+}

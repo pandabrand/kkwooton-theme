@@ -1,0 +1,23 @@
+.navbar-nav li,
+.banner .nav li {
+  font-family: $franklin;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+
+  @extend .nav-item;
+}
+
+.navbar-nav li a,
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.navbar-brand {
+  font-family: $franklin;
+  letter-spacing: 0.0625em;
+  font-size: 1.5em;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 2em;
+  }
+}

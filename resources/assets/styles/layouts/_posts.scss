@@ -1,0 +1,20 @@
+article {
+  margin-bottom: 4em;
+
+  header {
+    .header-detail {
+      font-family: $franklin;
+      font-size: 0.875em;
+      letter-spacing: 0.0625em;
+      text-transform: uppercase;
+      margin-bottom: 0.125em;
+      line-height: 1.25;
+    }
+  }
+
+  .entry-summary {
+    .event-detail {
+      font-style: italic;
+    }
+  }
+}

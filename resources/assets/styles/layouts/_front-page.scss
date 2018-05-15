@@ -1,0 +1,25 @@
+.home {
+  .content {
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+
+    .main {
+      @extend .col-12;
+
+      .front-page-hero {
+        background: url('../images/home-mobiblu__1524067123.jpg');
+        background-position: right top;
+        background-size: cover;
+        min-height: calc(100vh - 75px);
+
+        @include media-breakpoint-up(sm) {
+          background: url('../images/home__1524066352.jpg');
+          background-position: center top;
+          background-size: cover;
+          min-height: 500px;
+        }
+      }
+    }
+  }
+}

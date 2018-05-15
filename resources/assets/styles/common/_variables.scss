@@ -1,0 +1,14 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$gray: #f6f3f3;
+$dark-gray: #666;
+
+$page-background-color: $gray;
+
+$theme-colors: (
+  primary: #000
+);
+
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

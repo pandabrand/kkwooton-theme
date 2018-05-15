@@ -1,0 +1,29 @@
+@import url("//hello.myfonts.net/count/2e9206");
+@import url("//hello.myfonts.net/count/2e491b");
+
+$franklin: 'FranklinGothicURW-Hea', Helvetica, Arial, sans-serif;
+$trade-gothic-pro: 'TradeGothicLTPro', Helvetica, Arial, sans-serif;
+$trade-gothic-pro-bold: 'TradeGothicLTPro-Bold', Helvetica, Arial, sans-serif;
+$trade-gothic-pro-obl: 'TradeGothicLTPro-Obl', Helvetica, Arial, sans-serif;
+
+body {
+  font-family: $trade-gothic-pro;
+  color: $dark-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $franklin;
+}
+
+strong {
+  font-family: $trade-gothic-pro-bold;
+}
+
+p {
+  font-size: 0.875em;
+}
