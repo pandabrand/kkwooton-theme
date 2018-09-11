@@ -6,6 +6,9 @@
   </header>
   <div class="entry-summary">
     <div class="event-detail">@php the_field('event_detail') @endphp</div>
+    @if (get_field('address'))
+      <div class="event-detail">@php the_field('address') @endphp</div>
+    @endif
     <div class="event-url"><a href="{{the_field('url')}}" target="_blank">@php the_field('url') @endphp</a></div>
     <div class="entry-content">@php the_content() @endphp</div>
     @if ( has_post_thumbnail() )

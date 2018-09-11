@@ -12,10 +12,29 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), [], null, true);
     // wp_enqueue_style('kk/fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:900', array(), null);
-    // wp_enqueue_style('kk/webkit', asset_path('styles/vendor/MyFontsWebfontsKit.css'), false, null);
+    // wp_enqueue_style('kk/MyFontsWebfontsKit.css', asset_path('styles/vendor/MyFontsWebfontsKit.css'), false, null);
 }, 100);
+
+/**
+ * Moving jQuery to non-blocking request
+ */
+add_action('template_redirect', function () {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_deregister_script('jquery-migrate.min');
+        wp_deregister_script('comment-reply.min');
+
+        $protocol = 'http:';
+        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+            $protocol = 'https:';
+        }
+        wp_register_script('jquery', $protocol.'//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', false, '3.6', true);
+
+        wp_enqueue_script('jquery');
+    }
+}, 50);
 
 /**
  * Theme setup

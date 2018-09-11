@@ -1,7 +1,8 @@
 .sidebar {
   @extend .col-sm-4;
 
-  .widget {
+  .widget,
+  .widget_custom_html {
     margin-bottom: 1.5em;
 
     h3 {
