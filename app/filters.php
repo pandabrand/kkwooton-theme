@@ -68,3 +68,8 @@ add_filter('comments_template', function ($comments_template) {
     );
     return template_path(locate_template(["views/{$comments_template}", $comments_template]) ?: $comments_template);
 }, 100);
+
+
+add_filter( 'the_title', function ( $title ) {
+    return html_entity_decode($title);
+}, 10, 2 );
